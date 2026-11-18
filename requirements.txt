@@ -1,1 +1,6 @@
 faster-whisper==1.2.1
+
+# PyAV figé : les versions 17+ ne sont pas compatibles avec faster-whisper 1.2.1
+# (TypeError: av.open() got an unexpected keyword argument 'metadata_errors').
+# Testé : av 19.0.2 en échec, av 16.1.0 fonctionne.
+av==16.1.0
