@@ -32,12 +32,12 @@ def transcribe(audio_path: Path, model_size: str = "small",
     t1 = time.perf_counter()
     segments, info = model.transcribe(
         str(audio_path),
-        language=language,  # on impose le français au lieu de le détecter
+        language=language,  # on impose le français 
         vad_filter=vad,     # saute les passages sans parole
         beam_size=5,
     )
 
-    # 3. ⚠️ C'est ICI que le calcul a vraiment lieu (voir explications)
+
     results = []
     for seg in segments:
         text = seg.text.strip()
