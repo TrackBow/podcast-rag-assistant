@@ -10,13 +10,7 @@ import time
 from pathlib import Path
 
 from faster_whisper import WhisperModel
-
-
-def format_ts(seconds: float) -> str:
-    """Convertit des secondes (ex. 125.4) en texte HH:MM:SS (ex. 00:02:05)."""
-    minutes, secs = divmod(int(seconds), 60)
-    hours, minutes = divmod(minutes, 60)
-    return f"{hours:02d}:{minutes:02d}:{secs:02d}"
+from podcast_rag.utils import format_ts
 
 
 def transcribe(audio_path: Path, model_size: str = "small",

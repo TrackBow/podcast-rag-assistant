@@ -4,3 +4,9 @@ faster-whisper==1.2.1
 # (TypeError: av.open() got an unexpected keyword argument 'metadata_errors').
 # Testé : av 19.0.2 en échec, av 16.1.0 fonctionne.
 av==16.1.0
+
+# Appels HTTP vers l'API d'Ollama (embeddings, LLM)
+httpx==0.28.1
+
+# Calcul vectoriel (similarité entre embeddings)
+numpy==2.5.5
